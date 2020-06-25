@@ -15,3 +15,7 @@
     transform: scale(1.1);
     cursor: pointer;
 }
+
+.layui-btn-group {
+    border-radius: 5%;
+}

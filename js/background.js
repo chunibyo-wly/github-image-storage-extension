@@ -5,7 +5,7 @@ chrome.browserAction.onClicked.addListener(function (tab) {
     let top = Math.round((screen.height / 2) - (h / 2));
 
     chrome.windows.create({
-        url: 'popup.html',
+        url: './pages/index.html',
         width: w,
         height: h,
         focused: true,
