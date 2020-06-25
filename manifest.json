@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "GitHub图床",
+  "description": "使用GitHub仓库作为图床",
+  "version": "1.0",
+  "permissions": [
+    "tabs"
+  ],
+  "icons": {
+    "16": "icon/GitHub-Mark-120px-plus.png",
+    "48": "icon/GitHub-Mark-120px-plus.png",
+    "128": "icon/GitHub-Mark-120px-plus.png"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icon/GitHub-Mark-32px.png"
+  }
+}
