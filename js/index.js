@@ -28,7 +28,7 @@ layui.use(['upload', 'util', 'layer'], function () {
 
     // 切换url类型
     let urlFormat = "1"
-    let changeUrlFormat = function () {
+    $("#url-format > .layui-btn").on("click", function () {
         if (urlFormat === $(this).val()) return
         // 1. 全局变量保存url类型
         urlFormat = $(this).val()
@@ -36,6 +36,5 @@ layui.use(['upload', 'util', 'layer'], function () {
         $(this).removeClass("layui-btn-primary")
         // 3. 移除已经激活的按钮
         $(this).siblings(":not(layui-btn-primary)").addClass("layui-btn-primary")
-    }
-    $("#url-format > .layui-btn").on("click", () => changeUrlFormat())
+    })
 })
