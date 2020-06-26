@@ -37,16 +37,5 @@ layui.use(['upload', 'util', 'layer'], function () {
         // 3. 移除已经激活的按钮
         $(this).siblings(":not(layui-btn-primary)").addClass("layui-btn-primary")
     }
-    $("#url-format > .layui-btn").on("click", changeUrlFormat)
-
-    // 进入设置页面
-    $(".layui-icon-set").on("click", () => {
-        window.open('settings.html', '_self')
-    })
-
-    // 进入历史页面
-    $(".layui-icon-time").on("click", () => {
-        window.open('history.html', '_self')
-    })
-
+    $("#url-format > .layui-btn").on("click", () => changeUrlFormat())
 })
