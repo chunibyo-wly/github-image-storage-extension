@@ -4,7 +4,8 @@
   "description": "使用GitHub仓库作为图床",
   "version": "1.0",
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "icons": {
     "16": "icon/GitHub-Mark-120px-plus.png",
