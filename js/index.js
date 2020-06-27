@@ -15,16 +15,7 @@ layui.use(['upload', 'util', 'layer'], function () {
         // 3. 移除已经激活的按钮
         $(this).siblings(":not(layui-btn-primary)").addClass("layui-btn-primary")
     })
-
     // ================== 切换url类型 ==================
-
-    function copyToClipboard(text) {
-        let $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val(text).trigger('select');
-        document.execCommand("copy");
-        $temp.remove();
-    }
 
     // 0: Markdown
     // 1: HTML

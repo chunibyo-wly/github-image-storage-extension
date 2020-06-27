@@ -6,3 +6,12 @@
 
 // 进入主页
 [].forEach.call(document.getElementsByClassName("layui-icon-home"), item => item.onclick = () => window.open('index.html', '_self'));
+
+function copyToClipboard(text) {
+    let temp = document.createElement("input")
+    document.getElementsByTagName("body")[0].append(temp)
+    temp.value = text
+    temp.select()
+    document.execCommand("copy");
+    temp.remove()
+}

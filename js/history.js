@@ -2,6 +2,10 @@ layui.use(['jquery', 'laypage'], function () {
     let $ = layui.$,
         laypage = layui.laypage;
 
+    let handleClick = function () {
+        copyToClipboard(`![](${$(this).attr('src')})`)
+    }
+
     let $dummy = $("#image-board")
 
     let drawImage = function (imageList) {
@@ -19,6 +23,7 @@ layui.use(['jquery', 'laypage'], function () {
                 `
             $dummy.children('div.layui-row').last().append(html)
         })
+        $('.crop').on('click', 'img', undefined, handleClick)
     }
 
     // 读取配置文件后发送get请求
@@ -41,7 +46,7 @@ layui.use(['jquery', 'laypage'], function () {
                     limit: 9,
                     jump: function (obj, first) {
                         console.log((obj.curr - 1) * 9, obj.curr * 9 - 1)
-                        drawImage(response.slice((obj.curr - 1) * 9, obj.curr * 9 ))
+                        drawImage(response.slice((obj.curr - 1) * 9, obj.curr * 9))
                     }
                 });
             });
